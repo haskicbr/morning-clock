@@ -1,0 +1,82 @@
+<html lang="ru">
+
+<head>
+    <title> some title </title>
+    
+    <style>
+        .clock-body {
+            background: red;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+        }
+
+        #seconds {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: 0px;
+            animation-name: firstPlayer;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: revert;
+            animation-delay: 0ms;
+            animation-timing-function: linear;
+        }
+
+        #ms-seconds {
+            position: absolute;
+            top: 0px;
+            height: 100px;
+            width: 100px;
+            animation-name: firstPlayer;
+            animation-duration: 1000ms;
+            animation-iteration-count: infinite;
+            animation-fill-mode: revert;
+            animation-delay: 0ms;
+            animation-timing-function: linear;
+        }
+
+        #seconds-arrow {
+            width: 2px;
+            left: 49px;
+            background: black;
+            position: relative;
+            height: 50%;
+        }
+
+        #ms-seconds-arrow {
+            width: 2px;
+            left: 49px;
+            background: black;
+            position: relative;
+            height: 50%;
+        }
+
+
+        @keyframes firstPlayer {
+
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="clock-body">
+    <div id="seconds">
+        <div id="seconds-arrow"></div>
+    </div>
+
+    <div id="ms-seconds">
+        <div id="ms-seconds-arrow"></div>
+    </div>
+</div>
+</body>
+
+</html>
